@@ -2,79 +2,22 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>JSON Katalog Örneği</title>
-        <script type="text/javascript" src="database.js"></script>
-        <script language="JavaScript"> 
-var NS4 = (document.layers); // hangi browser? 
-var IE4 = (document.all); 
+        <title> Mitolojik Kitaplar Kataloğu </title>
+        <script type="text/javascript" src="database.js"> </script>
+        <h1> Mitolojik Kitaplar </h1>
 
-var win = window; 
-var n = 0; 
-
-function findInPage(str) { 
-
-var txt, i, found; 
-
-if (str == "e") 
-return false; 
-
-if (NS4) { 
-
-if (!win.find(str)) 
-while(win.find(str, false, true)) 
-n++; 
-else 
-n++; 
-
-if (n == 0) 
-alert("Aradığınız kelime sayfada bulunamadı."); 
-} 
-
-if (IE4) { 
-txt = win.document.body.createTextRange(); 
-
-for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) { 
-txt.moveStart("character", 1); 
-txt.moveEnd("textedit"); 
-} 
-
-if (found) { 
-txt.moveStart("character", -1); 
-txt.findText(str); 
-txt.select(); 
-txt.scrollIntoView(); 
-n++; 
-} 
-
-else { 
-if (n > 0) { 
-n = 0; 
-findInPage(str); 
-} 
-
-else 
-alert("Aradığınız kelime sayfada bulunamadı."); 
-} 
-} 
-
-return false; 
-} 
-
-</script> 
-    </head>
+ </head>
 <body>
-    <form name="search" onSubmit="return findInPage(this.string.value);"> 
-<font size=3> <input name="string" type="text" size=15 onChange="n = 0;"></font> 
-<input type="submit" value=" Ara "> 
-</form>  
 <p id="goster"></p>
 
 <script>
-for(var i=0; i<3; i++)
-{
+for(var i=0; i<10; i++){
 document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemImage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + catalog[i].itemAuthor + "<br>" + catalog[i].itemDescription + "</p>";
-}
+}    
+    
+
 </script>
 
+    
 </body>
 </html>
