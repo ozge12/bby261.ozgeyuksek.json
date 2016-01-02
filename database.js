@@ -104,6 +104,4 @@ var catalog = [
     
     
     
-    
-    
 ];
