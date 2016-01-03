@@ -9,11 +9,23 @@
     </head>
 <body>
    <center> 
-    <select name="liste">
-<option value="Felsefe">Felsefe</option>
-<option value="Mitoloji">Mitoloji</option>
+          
+       
+    <select name="liste" onchange="location = this.options[this.selectedIndex].value;">
+        
+        <option selected value=""> Konu Seçiniz</option>
+        <option value="database.js">Mitoloji</option>
+        <option value="database.js">Felsefe</option>
+        </select>
+<script type="text/javascript">
+function sec(elm)
+{
+window.location = elm.value+".html"; 
+}
+</script>
 
-</select> </center>
+    
+    </center>
 <p id="goster"></p>
 <script>
 for(var i=0; i<21; i++){
