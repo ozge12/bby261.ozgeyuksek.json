@@ -2,26 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title> Mitoloji ve Felsefe Kitapları Kataloğu </title>
-        <script type="text/javascript" src="database.js"> </script> 
-        <h1> Mitolojik Kitaplar </h1>
- </head>
+        <title>Özge'nin Kütüphanesi</title>
+        <script type="text/javascript" src="database.js"></script>
+        <center> <h1> Mitoloji ve Felsefe Kitapları</h1> </center>
+
+    </head>
 <body>
+   <center> 
+    <select name="liste">
+<option value="Felsefe">Felsefe</option>
+<option value="Mitoloji">Mitoloji</option>
+
+</select> </center>
 <p id="goster"></p>
-
 <script>
-for(var i=0; i<10; i++){
+for(var i=0; i<21; i++){
 document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemImage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + catalog[i].itemAuthor + "<br>" + catalog[i].itemDescription + "</p>";
-}    
-  
-    
-    
-  
-    
-    
-
+}
 </script>
-
-   
+<link rel="stylesheet" href="stil.css">
 </body>
 </html>
