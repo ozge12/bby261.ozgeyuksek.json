@@ -8,34 +8,32 @@
 
     </head>
 <body>
-   <center> 
-          
-       
-    <select name="liste" onchange="location = this.options[this.selectedIndex].value;">
-        
-        <option selected value=""> Konu Seçiniz</option>
-        <option value="index.html">Mitoloji</option>
-        <option value="index.html">Felsefe</option>
-        </select>
-<script type="text/javascript">
-function sec(elm)
-{
-window.location = elm.value+".html"; 
-}
-</script>
+ <button onclick="tarama()" >ARA</button >
+<input type="text" id="arama" autofocus maxlength="25" size="40" />
 
-    
-    </center>
-<p id="goster"></p>
 <script>
-for(var i=0; i<21; i++){
-document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemImage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + catalog[i].itemAuthor + "<br>" + catalog[i].itemDescription + "</p>";
+
+    function tarama (){
+        var gelen = document.getElementById("arama").value;
+    
+for(var i=0; i<20; i++){
+    
+     if(catalog[i].itemAuthor.toLowerCase().indexOf(gelen.toLowerCase())!=-1 || catalog[i].itemName.toLowerCase().indexOf(gelen.toLowerCase())!=-1)
+     {
+         document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemImage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + catalog[i].itemAuthor + "<br>" + catalog[i].itemDescription + "</p>";
+         
+     }
+    
+
 }
+        
+        
+    }
 </script>
 <link rel="stylesheet" href="stil.css">
      
     
-    
+  <p id="goster"></p>  
 </body>
     
 </html>

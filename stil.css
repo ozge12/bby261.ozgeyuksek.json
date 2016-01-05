@@ -1,5 +1,13 @@
-body{background-color: cadetblue} 
-body{font-style: italic} 
+
+body
+{
+    background-image: url(arka.jpg)
+    font-style: italic;
+    text-align: center;
+} 
+
+
+
 p {margin-left: 20px}
 p {color: rosybrown}
  h1 {color:black;}
