@@ -1,16 +1,17 @@
 
 body
 {
-    background-image: url(arka.jpg)
+    background-image: url(page.jpg) ;
+    background-size:auto;
     font-style: italic;
     text-align: center;
 } 
 
 
 
-p {margin-left: 20px}
-p {color: rosybrown}
- h1 {color:black;}
-h1{border-style: groove}
-            p{color: white;}
+p {margin-left: 20px ;
+font-size:30px}
+ h1 {color:darkred;}
+h1{border-style:hidden}
+            p{color:black;}
         
